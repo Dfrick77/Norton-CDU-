@@ -134,7 +134,24 @@ function renderAlgorithms(algorithms) {
     const btn = document.createElement("button");
     btn.className = "algorithm-thumb";
     btn.type = "button";
-    btn.innerHTML = `<img src="${alg.file}" alt="${alg.title}" loading="lazy"><span>${alg.title}</span>`;
+
+    const img = document.createElement("img");
+    img.src = alg.file;
+    img.alt = alg.title;
+    img.loading = "lazy";
+    img.addEventListener("error", () => {
+      btn.classList.add("thumb-broken");
+      img.replaceWith(Object.assign(document.createElement("div"), {
+        className: "thumb-broken-msg",
+        textContent: "Image failed to load — " + alg.file
+      }));
+    });
+
+    const caption = document.createElement("span");
+    caption.textContent = alg.title;
+
+    btn.appendChild(img);
+    btn.appendChild(caption);
     btn.addEventListener("click", () => openLightbox(alg.file, alg.title));
     row.appendChild(btn);
   });
