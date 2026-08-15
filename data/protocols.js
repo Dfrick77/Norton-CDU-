@@ -75,6 +75,9 @@ const PROTOCOLS = [
         "Change in diagnosis requiring further therapy or workup"
       ]}
     ],
+    algorithms: [
+      { title: "Renal Colic Protocol", file: "images/renal-colic.png" }
+    ],
     orderSet: {
       title: "Renal Colic Observation Order Set",
       diagnosis: "Renal Colic",
@@ -133,6 +136,9 @@ const PROTOCOLS = [
         "Inadequate response to therapy; inability to take oral medications",
         "Abnormal vital signs: SBP <100 or RR >24 or hypoxia"
       ]}
+    ],
+    algorithms: [
+      { title: "Allergic Reaction Protocol", file: "images/allergic-reaction.png" }
     ],
     orderSet: {
       title: "Allergic Reaction Observation Order Set",
@@ -238,6 +244,9 @@ const PROTOCOLS = [
         "Persistent PEFR <70% of predicted; hypoxic despite therapy if not chronic"
       ]}
     ],
+    algorithms: [
+      { title: "Asthma Exacerbation Protocol", file: "images/asthma-exacerbation.png" }
+    ],
     orderSet: {
       title: "Asthma Exacerbation Observation Order Set",
       diagnosis: "Asthma Exacerbation",
@@ -306,6 +315,9 @@ const PROTOCOLS = [
         "Recurrence of dysrhythmia with symptoms; troponin elevation; new heart failure signs"
       ]}
     ],
+    algorithms: [
+      { title: "Dysrhythmia Protocol", file: "images/dysrhythmia.png" }
+    ],
     orderSet: {
       title: "Dysrhythmia Observation Order Set",
       diagnosis: "Dysrhythmia",
@@ -370,6 +382,9 @@ const PROTOCOLS = [
         "Positive MRI findings; urinary retention not resolving; neurosurgical recommendation for admission"
       ]}
     ],
+    algorithms: [
+      { title: "Cauda Equina Rule Out Protocol", file: "images/cauda-equina.png" }
+    ],
     orderSet: {
       title: "Back Pain / Cauda Equina Rule-Out Order Set",
       diagnosis: "Cauda Equina Rule Out",
@@ -427,6 +442,9 @@ const PROTOCOLS = [
         "Inadequate response to therapy; requirement of >3 units of blood"
       ]}
     ],
+    algorithms: [
+      { title: "Blood Transfusion Protocol", file: "images/blood-transfusion.png" }
+    ],
     orderSet: {
       title: "Blood Transfusion Observation Order Set",
       diagnosis: "Blood Transfusion",
@@ -480,6 +498,9 @@ const PROTOCOLS = [
         "Increase in skin involvement; clinical condition worse (rising temp, poor vitals)",
         "Unable to take oral medications or care for wound at home"
       ]}
+    ],
+    algorithms: [
+      { title: "Cellulitis Protocol", file: "images/cellulitis.png" }
     ],
     orderSet: {
       title: "Cellulitis Observation Order Set",
@@ -541,6 +562,12 @@ const PROTOCOLS = [
         "CDU or personal physician discretion; serious alternative diagnosis (PE, aortic dissection)"
       ]}
     ],
+    algorithms: [
+      { title: "ED Chest Pain Algorithm with CDU Observation", file: "images/chest-pain-algorithm.png" },
+      { title: "ED Chest Pain Imaging Guidance", file: "images/chest-pain-imaging-guidance.png" },
+      { title: "Low to Moderate Risk Chest Pain Protocol", file: "images/chest-pain-low-moderate.png" },
+      { title: "Guidelines for Stress Testing: ED Observation Unit", file: "images/stress-testing-guidelines.png" }
+    ],
     orderSet: {
       title: "Chest Pain (Low-Moderate Risk) Observation Order Set",
       diagnosis: "Low-Moderate Risk Chest Pain",
@@ -591,6 +618,9 @@ const PROTOCOLS = [
         "Progressive deterioration; failure to resolve exacerbation within 18 hours",
         "Co-existent pneumonia or CHF; uncompensated pCO2 retention; O2 sat <90% on room air or home FiO2"
       ]}
+    ],
+    algorithms: [
+      { title: "COPD Exacerbation Protocol", file: "images/copd-exacerbation.png" }
     ],
     orderSet: {
       title: "COPD Exacerbation Observation Order Set",
@@ -650,6 +680,9 @@ const PROTOCOLS = [
         "Unstable VS; associated cause requiring hospitalization; inability to tolerate oral fluids despite protocol; continued nausea/vomiting >12 hours"
       ]}
     ],
+    algorithms: [
+      { title: "Dehydration / Intractable Nausea & Vomiting Protocol", file: "images/dehydration-nausea-vomiting.png" }
+    ],
     orderSet: {
       title: "Dehydration / Nausea & Vomiting Observation Order Set",
       diagnosis: "Dehydration / Intractable Nausea and Vomiting",
@@ -690,6 +723,9 @@ const PROTOCOLS = [
       { heading: "Admission Parameters", items: [
         "Recurrent bleeding; unable to control bleeding in 16 hours; posterior packing required; airway or hemodynamic compromise"
       ]}
+    ],
+    algorithms: [
+      { title: "Epistaxis Protocol", file: "images/epistaxis.png" }
     ],
     orderSet: {
       title: "Epistaxis Observation Order Set",
@@ -745,6 +781,9 @@ const PROTOCOLS = [
       { heading: "Admission Parameters", items: [
         "No resolution in pain; deterioration in clinical course; rule-in of exclusionary causes; abnormal MRI/MRA/MRV if done"
       ]}
+    ],
+    algorithms: [
+      { title: "Intractable Headache Protocol", file: "images/headache-intractable.png" }
     ],
     orderSet: {
       title: "Headache (Intractable Pain) Observation Order Set",
@@ -841,6 +880,9 @@ const PROTOCOLS = [
         "Acute comorbid/precipitating condition identified; unable to tolerate PO"
       ]}
     ],
+    algorithms: [
+      { title: "Hyperglycemia Protocol", file: "images/hyperglycemia.png" }
+    ],
     orderSet: {
       title: "Hyperglycemia Observation Order Set",
       diagnosis: "Hyperglycemia",
@@ -885,6 +927,9 @@ const PROTOCOLS = [
         "Bedside glucose repeatedly <80 despite trial of diet and IV glucose; requiring dextrose drip"
       ]}
     ],
+    algorithms: [
+      { title: "Hypoglycemia Protocol", file: "images/hypoglycemia.png" }
+    ],
     orderSet: {
       title: "Hypoglycemia Observation Order Set",
       diagnosis: "Hypoglycemia",
@@ -928,6 +973,9 @@ const PROTOCOLS = [
         "Unstable VS; associated cause requiring hospitalization; inability to tolerate oral fluids"
       ]}
     ],
+    algorithms: [
+      { title: "Hypokalemia Protocol", file: "images/hypokalemia.png" }
+    ],
     orderSet: {
       title: "Hypokalemia / Hypomagnesemia Observation Order Set",
       diagnosis: "Hypokalemia / Hypomagnesemia",
@@ -967,6 +1015,9 @@ const PROTOCOLS = [
         "Facial cellulitis extending to neck; drooling, stridor, or trismus despite ENT interventions",
         "Sepsis signs or failure of outpatient treatment"
       ]}
+    ],
+    algorithms: [
+      { title: "Peritonsillar Abscess Protocol", file: "images/peritonsillar-abscess.png" }
     ],
     orderSet: {
       title: "Peritonsillar Abscess Observation Order Set",
@@ -1025,6 +1076,9 @@ const PROTOCOLS = [
         "Patient not subjectively improved enough for discharge; lack of clinical progress or deterioration; CDU physician discretion"
       ]}
     ],
+    algorithms: [
+      { title: "Pneumonia Protocol", file: "images/pneumonia.png" }
+    ],
     orderSet: {
       title: "Pneumonia Observation Order Set",
       diagnosis: "Pneumonia",
@@ -1080,6 +1134,9 @@ const PROTOCOLS = [
         "Rule-in for exclusionary causes; not sufficiently alert for discharge after 16–18 hours"
       ]}
     ],
+    algorithms: [
+      { title: "Seizure Protocol", file: "images/seizure.png" }
+    ],
     orderSet: {
       title: "Seizure Observation Order Set",
       diagnosis: "Seizure",
@@ -1131,6 +1188,9 @@ const PROTOCOLS = [
         "Deterioration of clinical course; significant testing abnormalities; unsafe home environment; unable to perform ADLs"
       ]}
     ],
+    algorithms: [
+      { title: "Syncope Protocol", file: "images/syncope.png" }
+    ],
     orderSet: {
       title: "Syncope Observation Order Set",
       diagnosis: "Syncope",
@@ -1181,6 +1241,9 @@ const PROTOCOLS = [
         "Recurrent symptoms/deficit; evidence of treatable vascular disease (>50% stenosis) or embolic source requiring anticoagulation",
         "Paroxysmal AF; unable to complete workup or safely discharge within timeframe; CDU physician judgment"
       ]}
+    ],
+    algorithms: [
+      { title: "Stroke Rule Out / TIA Protocol", file: "images/tia-stroke.png" }
     ],
     orderSet: {
       title: "Transient Ischemic Attack — Observation Order Set",
@@ -1249,6 +1312,9 @@ const PROTOCOLS = [
         "Clinical deterioration or lack of adequate improvement; inability to tolerate oral meds or hydration",
         "Unstable VS or evidence of septic shock; abnormal imaging (ureteral obstruction, emphysematous pyelonephritis)"
       ]}
+    ],
+    algorithms: [
+      { title: "UTI / Pyelonephritis Protocol", file: "images/uti-pyelonephritis.png" }
     ],
     orderSet: {
       title: "Urinary Tract Infection / Pyelonephritis Order Set",
@@ -1331,6 +1397,9 @@ const PROTOCOLS = [
       { heading: "Admission Parameters", items: [
         "Bleeding or thromboembolic complications; failure of the above discharge parameters; PE attending consult if high-risk features occur"
       ]}
+    ],
+    algorithms: [
+      { title: "Venous Thromboembolism (VTE) Protocol", file: "images/vte.png" }
     ],
     orderSet: {
       title: "Venous Thromboembolism Observation Order Set",

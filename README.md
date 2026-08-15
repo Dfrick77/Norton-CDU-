@@ -44,8 +44,10 @@ rather than invented:
 - **Vaginal Bleeding** — criteria only, no order set
 - **Vertigo** — criteria only, no order set
 
-The manual also references 26 flowchart diagrams (one per protocol) that were not yet
-brought into this site — ask Claude to add them as a follow-up if you'd like.
+The manual's flowchart diagrams are included as "Protocol Algorithm" thumbnails inside each
+matching protocol card — click one to view it full-size. Five protocols have no flowchart
+because the source manual's Appendix A didn't include one for them: **Abdominal Pain,
+Appendicitis, Heart Failure (CHF), Vaginal Bleeding, and Vertigo.**
 
 ## Publishing it online (GitHub Pages)
 

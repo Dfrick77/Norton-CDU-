@@ -119,6 +119,30 @@ function renderOrderSet(orderSet, headingOverride) {
   return wrap;
 }
 
+function renderAlgorithms(algorithms) {
+  const wrap = document.createElement("div");
+  wrap.className = "algorithms";
+
+  const label = document.createElement("div");
+  label.className = "algorithms-label";
+  label.textContent = algorithms.length > 1 ? "Protocol Algorithms" : "Protocol Algorithm";
+  wrap.appendChild(label);
+
+  const row = document.createElement("div");
+  row.className = "algorithms-row";
+  algorithms.forEach((alg) => {
+    const btn = document.createElement("button");
+    btn.className = "algorithm-thumb";
+    btn.type = "button";
+    btn.innerHTML = `<img src="${alg.file}" alt="${alg.title}" loading="lazy"><span>${alg.title}</span>`;
+    btn.addEventListener("click", () => openLightbox(alg.file, alg.title));
+    row.appendChild(btn);
+  });
+  wrap.appendChild(row);
+
+  return wrap;
+}
+
 function renderProtocolCard(protocol) {
   const card = document.createElement("div");
   card.className = "protocol-card";
@@ -156,6 +180,10 @@ function renderProtocolCard(protocol) {
     body.appendChild(div);
   });
 
+  if (protocol.algorithms && protocol.algorithms.length) {
+    body.appendChild(renderAlgorithms(protocol.algorithms));
+  }
+
   if (protocol.orderSet) {
     body.appendChild(renderOrderSet(protocol.orderSet));
   }
@@ -172,6 +200,29 @@ function renderProtocolCard(protocol) {
   card.appendChild(body);
   return card;
 }
+
+// ============================================================
+// Lightbox for protocol algorithm diagrams
+// ============================================================
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxTitle = document.getElementById("lightbox-title");
+
+function openLightbox(file, title) {
+  lightboxImg.src = file;
+  lightboxImg.alt = title;
+  lightboxTitle.textContent = title;
+  lightbox.hidden = false;
+}
+function closeLightbox() {
+  lightbox.hidden = true;
+  lightboxImg.src = "";
+}
+document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
+document.getElementById("lightbox-backdrop").addEventListener("click", closeLightbox);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+});
 
 const listEl = document.getElementById("protocol-list");
 
