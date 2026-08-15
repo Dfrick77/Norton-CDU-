@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Norton CDU Protocols</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="gate">
+    <div class="gate-card">
+      <div class="gate-badge">CDU</div>
+      <h1>Norton Hospital<br>Clinical Decision Unit</h1>
+      <p class="gate-sub">Condition-Specific Protocol Reference</p>
+      <form id="gate-form" autocomplete="off">
+        <input type="password" id="gate-password" placeholder="Enter access password" autocomplete="off" />
+        <button type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate-error" hidden>Incorrect password. Try again.</p>
+      <p class="gate-note">Internal reference only — for authorized CDU/ED staff.</p>
+    </div>
+  </div>
+
+  <div id="site" hidden>
+    <header class="site-header">
+      <div class="header-inner">
+        <div class="header-title">
+          <span class="header-badge">CDU</span>
+          <div>
+            <h1>Condition-Specific Protocols</h1>
+            <p>Norton Hospital Emergency Department Observation Unit</p>
+          </div>
+        </div>
+        <button id="lock-btn" title="Lock site">Lock</button>
+      </div>
+      <div class="search-row">
+        <input type="text" id="search" placeholder="Search protocols (e.g. chest pain, asthma, seizure)..." />
+      </div>
+    </header>
+
+    <main>
+      <section id="protocol-list" class="protocol-list"></section>
+
+      <section class="supplemental">
+        <button class="supplemental-toggle" id="supplemental-toggle">
+          <span>Absolute Exclusion Criteria — Quick Reference</span>
+          <span class="chev">▾</span>
+        </button>
+        <div class="supplemental-body" id="supplemental-body" hidden></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Adapted from the Norton Hospital CDU Operations Manual (2025) — Department of Emergency Medicine. Restricted, internal use. Guidelines only; clinical judgment governs individual patient care.</p>
+    </footer>
+  </div>
+
+  <script src="data/protocols.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
