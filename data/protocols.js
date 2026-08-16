@@ -7,7 +7,7 @@
 const PROTOCOLS = [
   {
     id: "abdominal-pain",
-    name: "Abdominal Pain",
+    name: "Abdominal Pain/Colitis",
     criteria: [
       { heading: "Inclusion Criteria", items: [
         "Stable vital signs",
@@ -41,7 +41,36 @@ const PROTOCOLS = [
         "Surgical abdomen or consultant preference"
       ]}
     ],
-    orderSet: null
+    orderSet: {
+      title: "Abdominal Pain/Colitis Observation Order Set",
+      diagnosis: "Abdominal Pain/Colitis",
+      admitTo: "Norton Hospital Emergency Department Observation Unit",
+      fields: [
+        { label: "Activity", items: ["Up as Tolerated", "Bed Rest"] },
+        { label: "Diet", items: ["NPO Immediately", "NPO after Midnight"] },
+        { label: "IVF", items: ["0.9NS 1000 mL @ 75 mL/hr", "Lactated Ringers 1000 mL @ 75 mL/hr"] },
+        { label: "Consults", items: ["General Surgery"] },
+        { label: "Medications", subheading: "Antiemetic", items: ["Ondansetron (Zofran) 4 mg IV Push q6h PRN nausea/vomiting"] },
+        { label: "Medications", subheading: "Analgesics", items: [
+          "Acetaminophen 650 mg PO q4h PRN (Mild Pain 1–3)",
+          "Hydrocodone/Acetaminophen (Norco) 5/325 1 tab PO q4h PRN (Moderate Pain 4–6)",
+          "Oxycodone/Acetaminophen (Percocet) 5/325 1 tab PO q4h PRN (Moderate Pain 4–6)",
+          "Morphine 2 mg IV q4h PRN (Severe Pain 7–10)",
+          "Hydromorphone (Dilaudid) 1 mg IV q4h PRN (Severe Pain 7–10)"
+        ]},
+        { label: "Medications", subheading: "Antibiotics (select one regimen)", items: [
+          "Ceftriaxone / Metronidazole (Flagyl)",
+          "Piperacillin/Tazobactam (Zosyn)"
+        ]},
+        { label: "IV Fluid Orders", items: [
+          "Normal Saline 1000 mL — Bag volume 1000 mL, Rate 75 mL/hr, IntraVENous, STAT",
+          "Lactated Ringers 1000 mL — Bag volume 1000 mL, Rate 75 mL/hr, IntraVENous, STAT",
+          "Normal Saline BOLUS 1000 mL — Bag volume 1000 mL"
+        ]},
+        { label: "Labs", items: ["CBC w/ Auto Diff", "BMP", "BMP q6h", "PT/PTT/INR", "Type and Screen"] },
+        { label: "Nursing Orders", items: ["Saline Lock Insert", "VS Q4hr", "Cardiac Monitoring"] }
+      ]
+    }
   },
   {
     id: "renal-colic",
