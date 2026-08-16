@@ -42,7 +42,7 @@ const PROTOCOLS = [
       ]}
     ],
     algorithms: [
-      { title: "Abdominal Pain/Colitis", file: "images/abdominal-pain-appendicitis-nom.jpg" }
+      { title: "Abdominal Pain/Colitis", file: "images/abdominal-pain-colitis-algorithm.png" }
     ],
     orderSet: {
       title: "Abdominal Pain/Colitis Observation Order Set",
