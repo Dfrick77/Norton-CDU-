@@ -41,6 +41,9 @@ const PROTOCOLS = [
         "Surgical abdomen or consultant preference"
       ]}
     ],
+    algorithms: [
+      { title: "Appendicitis – Non-Operative Management (NOM) Pathway — adapted from Denver Health CDU", file: "images/abdominal-pain-appendicitis-nom.jpg" }
+    ],
     orderSet: {
       title: "Abdominal Pain/Colitis Observation Order Set",
       diagnosis: "Abdominal Pain/Colitis",

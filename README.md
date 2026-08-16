@@ -45,9 +45,16 @@ rather than invented:
 - **Vertigo** — criteria only, no order set
 
 The manual's flowchart diagrams are included as "Protocol Algorithm" thumbnails inside each
-matching protocol card — click one to view it full-size. Five protocols have no flowchart
-because the source manual's Appendix A didn't include one for them: **Abdominal Pain,
-Appendicitis, Heart Failure (CHF), Vaginal Bleeding, and Vertigo.**
+matching protocol card — click one to view it full-size. Four protocols have no flowchart
+because the source manual's Appendix A didn't include one for them: **Appendicitis,
+Heart Failure (CHF), Vaginal Bleeding, and Vertigo.**
+
+Abdominal Pain/Colitis's flowchart is a different case: it's the **"Appendicitis – Non-Operative
+Management (NOM)" pathway from Denver Health's CDU site** (dhcdu.com), added at the user's
+request. It's specifically about CT-confirmed uncomplicated appendicitis eligibility for
+non-operative (antibiotics-only) management — narrower than general abdominal pain triage —
+so the thumbnail title says so explicitly rather than presenting it as a generic abdominal pain
+flowchart.
 
 ## Publishing it online (GitHub Pages)
 
