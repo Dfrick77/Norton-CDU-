@@ -60,18 +60,12 @@ function critClass(heading) {
   return CRIT_CLASS[base] || "interventions";
 }
 
-function renderChecklist(items) {
+function renderPlainList(items) {
   const ul = document.createElement("ul");
-  ul.className = "os-checklist";
+  ul.className = "os-list";
   items.forEach((text) => {
     const li = document.createElement("li");
-    const box = document.createElement("span");
-    box.className = "os-check";
-    const label = document.createElement("span");
-    label.textContent = text;
-    li.appendChild(box);
-    li.appendChild(label);
-    li.addEventListener("click", () => li.classList.toggle("checked"));
+    li.textContent = text;
     ul.appendChild(li);
   });
   return ul;
@@ -112,10 +106,31 @@ function renderOrderSet(orderSet, headingOverride) {
       sub.textContent = field.subheading;
       container.appendChild(sub);
     }
-    container.appendChild(renderChecklist(field.items));
+    container.appendChild(renderPlainList(field.items));
     lastLabel = field.label;
   });
 
+  return wrap;
+}
+
+function renderOrderSetSection(protocol) {
+  const wrap = document.createElement("div");
+  wrap.className = "orderset-section";
+
+  const tab = document.createElement("button");
+  tab.type = "button";
+  tab.className = "orderset-tab";
+  tab.innerHTML = `<span>Order Set</span><span class="chev">▾</span>`;
+
+  const content = document.createElement("div");
+  content.className = "orderset-content";
+  if (protocol.orderSet) content.appendChild(renderOrderSet(protocol.orderSet));
+  if (protocol.orderSetAlt) content.appendChild(renderOrderSet(protocol.orderSetAlt));
+
+  tab.addEventListener("click", () => wrap.classList.toggle("open"));
+
+  wrap.appendChild(tab);
+  wrap.appendChild(content);
   return wrap;
 }
 
@@ -201,13 +216,9 @@ function renderProtocolCard(protocol) {
     body.appendChild(renderAlgorithms(protocol.algorithms));
   }
 
-  if (protocol.orderSet) {
-    body.appendChild(renderOrderSet(protocol.orderSet));
-  }
-  if (protocol.orderSetAlt) {
-    body.appendChild(renderOrderSet(protocol.orderSetAlt));
-  }
-  if (!protocol.orderSet && protocol.orderSetNote) {
+  if (protocol.orderSet || protocol.orderSetAlt) {
+    body.appendChild(renderOrderSetSection(protocol));
+  } else if (protocol.orderSetNote) {
     const note = document.createElement("p");
     note.className = "order-set-note";
     note.textContent = protocol.orderSetNote;
