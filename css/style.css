@@ -415,6 +415,7 @@ main {
   padding: 12px;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
 }
 .lightbox-body img {
   max-width: 100%;
