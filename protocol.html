@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Norton CDU Protocols</title>
+<title>Protocol — Norton CDU Protocols</title>
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -41,21 +41,11 @@
           <button id="lock-btn" class="nav-link nav-lock" title="Lock site">Lock</button>
         </nav>
       </div>
-      <div class="search-row">
-        <input type="text" id="search" placeholder="Search protocols (e.g. chest pain, asthma, seizure)..." />
-      </div>
     </header>
 
     <main>
-      <section id="protocol-list" class="protocol-list"></section>
-
-      <section class="supplemental">
-        <button class="supplemental-toggle" id="supplemental-toggle">
-          <span>Absolute Exclusion Criteria — Quick Reference</span>
-          <span class="chev">▾</span>
-        </button>
-        <div class="supplemental-body" id="supplemental-body" hidden></div>
-      </section>
+      <a class="back-link" href="index.html">← All Protocols</a>
+      <section id="protocol-detail" class="protocol-detail"></section>
     </main>
 
     <footer class="site-footer">
@@ -63,9 +53,22 @@
     </footer>
   </div>
 
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-panel">
+      <div class="lightbox-header">
+        <span id="lightbox-title"></span>
+        <button id="lightbox-close" title="Close">&times;</button>
+      </div>
+      <div class="lightbox-body">
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+    </div>
+  </div>
+
   <script src="data/protocols.js"></script>
   <script src="js/gate.js"></script>
   <script src="js/nav.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/protocol.js"></script>
 </body>
 </html>

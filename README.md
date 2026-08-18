@@ -1,8 +1,23 @@
 # Norton CDU Protocols
 
 A password-gated reference site listing Norton Hospital CDU (Clinical Decision Unit)
-condition-specific protocols. Click any diagnosis to expand its inclusion/exclusion
-criteria, interventions, discharge/admission parameters, and order set.
+condition-specific protocols. The home page (`index.html`) lists every diagnosis; clicking
+one opens its own page (`protocol.html?id=...`) with inclusion/exclusion criteria,
+interventions, discharge/admission parameters, the flowchart algorithm, and the order set.
+A "Pathways" menu in the top-right nav (hover or tap to open) lets you jump straight to any
+diagnosis from anywhere on the site.
+
+## File structure
+
+- `index.html` — home page: the searchable list of diagnoses (links to `protocol.html`)
+- `protocol.html` — detail page template: reads `?id=<protocol-id>` from the URL and renders
+  that one protocol's full content
+- `js/gate.js` — password gate logic, shared by both pages
+- `js/nav.js` — builds the "Pathways" dropdown menu in the nav bar, shared by both pages
+- `js/app.js` — home page rendering (the link list + search)
+- `js/protocol.js` — detail page rendering (criteria, algorithm lightbox, order set tab)
+- `data/protocols.js` — all protocol content
+- `images/` — flowchart diagrams
 
 ## Viewing it on your own computer
 
@@ -14,7 +29,7 @@ start a local preview for you again.)
 
 ## Changing the password
 
-Open `js/app.js` and edit this line near the top:
+Open `js/gate.js` and edit this line near the top:
 
 ```js
 const GATE_PASSWORD = "cdu2026";
