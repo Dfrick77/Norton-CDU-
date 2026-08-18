@@ -206,8 +206,38 @@ const PROTOCOLS = [
   {
     id: "appendicitis",
     name: "Appendicitis",
-    criteria: [],
-    criteriaNote: "The source manual includes only an Order Set for this protocol — no separate inclusion/exclusion criteria list was present in this document.",
+    criteria: [
+      { heading: "Inclusion Criteria", items: [
+        "Stable vital signs",
+        "Established IV access",
+        "No significant laboratory abnormality (e.g., anion gap <20, severe renal failure)",
+        "Confirmed appendicitis on CT and General Surgery consulted"
+      ]},
+      { heading: "Exclusion Criteria", items: [
+        "Evidence of hemodynamic compromise",
+        "Pregnancy",
+        "Hemoglobin <5",
+        "Co-morbid conditions requiring admission or critical care consultation"
+      ]},
+      { heading: "Potential CDU Interventions", items: [
+        "Monitoring for potential hemodynamic issues",
+        "IV fluids",
+        "Electrolyte replacement as indicated",
+        "Repeat labs as indicated",
+        "Antiemetics as indicated"
+      ]},
+      { heading: "Discharge Parameters", items: [
+        "General Surgery attending recommends discharge or outpatient management with close follow-up"
+      ]},
+      { heading: "Admission Parameters", items: [
+        "Worsening of clinical condition; patient becomes hypotensive",
+        "Additional complications found requiring hospitalization",
+        "Development of any exclusion criteria",
+        "Progression of clinical disease",
+        "Admission deemed necessary by consulting service",
+        "Mental status decline"
+      ]}
+    ],
     orderSet: {
       title: "Appendicitis Observation Order Set",
       diagnosis: "Appendicitis",
@@ -878,6 +908,9 @@ const PROTOCOLS = [
         "New ischemic EKG changes, arrhythmia, or positive cardiac markers; persistent hypoxia, rales, dyspnea",
         "Poor response to therapy; poor home support; physician judgment"
       ]}
+    ],
+    algorithms: [
+      { title: "Heart Failure (CHF) Protocol", file: "images/heart-failure-chf-algorithm.png" }
     ],
     orderSet: null,
     orderSetNote: "No Order Set was present for this protocol in the source document."

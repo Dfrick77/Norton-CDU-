@@ -54,20 +54,27 @@ Edit the text in quotes to update content; the site re-renders automatically fro
 
 A few protocols were missing a piece in the original document and are shown that way here
 rather than invented:
-- **Appendicitis** — order set only, no criteria list
-- **Heart Failure (CHF)** — criteria only, no order set
 - **Vaginal Bleeding** — criteria only, no order set
 - **Vertigo** — criteria only, no order set
 
-The manual's flowchart diagrams are included as "Protocol Algorithm" thumbnails inside each
-matching protocol card — click one to view it full-size. Four protocols have no flowchart
-because the source manual's Appendix A didn't include one for them: **Appendicitis,
-Heart Failure (CHF), Vaginal Bleeding, and Vertigo.**
+**Appendicitis** originally had an order set only, no criteria list, in the Norton source
+document. Its criteria (Inclusion, Exclusion, Potential CDU Interventions, Discharge/Admission
+Parameters) were added from the UofL CDU Manual's "Appendicitis (Fast Track General Surgery
+Pathway)" section, with one cleanup: the source repeats a garbled phrase — "(i.e.WAGMA Anion
+Gap <20...)" — verbatim across many of its protocols; "WAGMA" isn't a real clinical term, so
+it was dropped and normalized to "e.g., anion gap <20" rather than reproduced as noise.
 
-Abdominal Pain/Colitis's flowchart (`images/abdominal-pain-colitis-algorithm.png`) is a custom
-diagram built to match the manual's Norton-style visual layout (navy/orange/light-blue palette,
-no diamond decision shapes), covering surgical consult, non-operative management orders, and
-discharge/admission outcomes for this protocol.
+The manual's flowchart diagrams are included as "Protocol Algorithm" thumbnails inside each
+matching protocol card — click one to view it full-size. Two protocols have no flowchart
+because the source manual's Appendix A didn't include one for them: **Vaginal Bleeding and
+Vertigo.**
+
+Abdominal Pain/Colitis's and Heart Failure (CHF)'s flowcharts
+(`images/abdominal-pain-colitis-algorithm.png`, `images/heart-failure-chf-algorithm.png`) are
+custom diagrams built to match the manual's Norton-style visual layout (navy/orange/light-blue
+palette, no diamond decision shapes), using the clinical flow/content from Denver Health CDU
+pathway pages as a template, with institution-specific branding, staff names, and internal
+referral policies left out.
 
 ## Publishing it online (GitHub Pages)
 
