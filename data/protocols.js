@@ -205,18 +205,19 @@ const PROTOCOLS = [
   },
   {
     id: "appendicitis",
-    name: "Appendicitis",
+    name: "Appendicitis/Cholecystitis Surgical Short Stay",
     criteria: [
       { heading: "Inclusion Criteria", items: [
         "Stable vital signs",
         "Established IV access",
         "No significant laboratory abnormality (e.g., anion gap <20, severe renal failure)",
-        "Confirmed appendicitis on CT and General Surgery consulted"
+        "Confirmed appendicitis on CT and General Surgery consulted",
+        "Suspected discharge after OR or within 24 hours per discussion with Surgery"
       ]},
       { heading: "Exclusion Criteria", items: [
         "Evidence of hemodynamic compromise",
         "Pregnancy",
-        "Hemoglobin <5",
+        "Signs of sepsis / septic shock",
         "Co-morbid conditions requiring admission or critical care consultation"
       ]},
       { heading: "Potential CDU Interventions", items: [
@@ -224,10 +225,11 @@ const PROTOCOLS = [
         "IV fluids",
         "Electrolyte replacement as indicated",
         "Repeat labs as indicated",
-        "Antiemetics as indicated"
+        "Antiemetics as indicated",
+        "Antibiotics as indicated"
       ]},
       { heading: "Discharge Parameters", items: [
-        "General Surgery attending recommends discharge or outpatient management with close follow-up"
+        "OR complete and patient cleared for discharge by Surgery"
       ]},
       { heading: "Admission Parameters", items: [
         "Worsening of clinical condition; patient becomes hypotensive",
@@ -235,7 +237,7 @@ const PROTOCOLS = [
         "Development of any exclusion criteria",
         "Progression of clinical disease",
         "Admission deemed necessary by consulting service",
-        "Mental status decline"
+        "Unable to tolerate PO after surgery and prior to discharge"
       ]}
     ],
     orderSet: {
@@ -354,7 +356,6 @@ const PROTOCOLS = [
       { heading: "Exclusion Criteria", items: [
         "HR >110 despite ED medications; IV vasoactive drips required (e.g., diltiazem)",
         "Hemodynamically unstable; ongoing ischemic chest pain after rate control",
-        "AF onset >48 hours or unknown; chronic atrial fibrillation",
         "Acute comorbidities: evidence of acute MI, CHF, PE, sepsis, CVA/embolic event",
         "Troponin elevation; stable/unstable ventricular tachycardia or fibrillation",
         "High-grade AV block (II or III) or new wide-complex dysrhythmia",
@@ -364,6 +365,7 @@ const PROTOCOLS = [
         "Cardiac monitoring, pulse oximetry; VS Q2 hr x 6 hr, then Q4 hr",
         "Anticoagulate if not contraindicated — PO aspirin (325 mg) or SQ heparin (LMWH or UFH)",
         "Rate control options: oral Cardizem, verapamil, or beta blockers",
+        "Metoprolol 5 mg IV q5 min (max 3 doses) once while in observation",
         "Serial Troponin and ECGs at 3 and 6 hours from first ED blood draw",
         "TSH, 2D echocardiogram if indicated; educate patient on cardioversion options",
         "Electrical cardioversion to occur outside of the CDU; initiate anticoagulation if indicated"
@@ -390,7 +392,10 @@ const PROTOCOLS = [
         { label: "Diet", items: ["NPO", "Clears", "Regular Diet", "Cardiac Diet"] },
         { label: "Medications", subheading: "Rate Control", items: [
           "Metoprolol 5 mg IV q6h PRN HR >110",
-          "Diltiazem 10 mg IV PRN HR >110"
+          "Diltiazem 10 mg IV PRN HR >110",
+          "Metoprolol 25–100 mg PO BID",
+          "Diltiazem 60–120 mg PO TID",
+          "Extended-release rate control per Cardiology recommendations"
         ]},
         { label: "Medications", subheading: "Analgesic", items: ["Acetaminophen 650 mg PO q4h PRN (Mild Pain 1–3)"] },
         { label: "IV Fluid Orders", items: [
@@ -408,23 +413,19 @@ const PROTOCOLS = [
     id: "back-pain-cauda-equina",
     name: "Back Pain / Cauda Equina Rule-Out",
     criteria: [
-      { heading: "Inclusion Criteria — Back Pain", items: [
+      { heading: "Inclusion Criteria", items: [
         "Inability to adequately control pain in ED with analgesics",
         "Normal neurological function; no risk of metastatic disease or epidural abscess",
         "Back pain without severe trauma; normal imaging (if obtained)",
-        "Inability to ambulate because of pain"
-      ]},
-      { heading: "Exclusion Criteria — Back Pain", items: [
-        "Age over 65 years old; frequent ED visits / suspected narcotic-seeking behavior",
-        "Acute motor deficit (foot drop, loss of extension, loss of bowel/bladder control)",
-        "Abnormal X-rays (burst fracture, spine canal involvement)",
-        "High suspicion of cord compression, metastatic disease, epidural bleed/abscess, discitis; fever"
-      ]},
-      { heading: "Inclusion Criteria — Cauda Equina Rule-Out", items: [
+        "Inability to ambulate because of pain",
         "Back pain with red-flag symptoms (urinary retention/incontinence, saddle anesthesia)",
         "Stable vitals; able to undergo MRI within observation time"
       ]},
-      { heading: "Exclusion Criteria — Cauda Equina Rule-Out", items: [
+      { heading: "Exclusion Criteria", items: [
+        "Frequent ED visits / suspected narcotic-seeking behavior",
+        "Acute motor deficit (foot drop, loss of extension, loss of bowel/bladder control)",
+        "Abnormal X-rays (burst fracture, spine canal involvement)",
+        "High suspicion of cord compression, metastatic disease, epidural bleed/abscess, discitis; fever",
         "Immediate operative intervention warranted; unstable vitals or sepsis",
         "Known spinal hardware or metal contraindicating MRI",
         "Poor rectal tone or focal neurologic deficit; unable to undergo MRI within 24 hours"
