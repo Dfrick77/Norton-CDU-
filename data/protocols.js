@@ -241,8 +241,8 @@ const PROTOCOLS = [
       ]}
     ],
     orderSet: {
-      title: "Appendicitis Observation Order Set",
-      diagnosis: "Appendicitis",
+      title: "Appendicitis/Cholecystitis Surgical Short Stay Observation Order Set",
+      diagnosis: "Appendicitis/Cholecystitis Surgical Short Stay",
       admitTo: "Norton Hospital Emergency Department Observation Unit",
       fields: [
         { label: "Activity", items: ["Up as Tolerated", "Bed Rest"] },
